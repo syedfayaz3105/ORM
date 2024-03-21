@@ -9,8 +9,8 @@ To develop a Django application to store and retrieve data from a Book database 
 
 
 ## Entity Relationship Diagram
+![314384626-6dd3589b-0e65-4495-b9e8-88b909a2de97](https://github.com/syedfayaz3105/ORM/assets/147144126/c38000cc-6a53-4c63-9ec5-514fadb0bb6d)
 
-![WhatsApp Image 2024-03-07 at 23 23 28_5bda651e](https://github.com/syedfayaz3105/ORM/assets/147144126/2e219e82-593f-4298-b4c6-7d6684969186)
 
 
 ## DESIGN STEPS
@@ -31,30 +31,30 @@ Execute Django admin and create details for 10 books
 
 ```
 admin.py
+
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+from .models import Book,BookAdmin
+admin.site.register(Book,BookAdmin)
 
 models.py
+
 from django.db import models
 from django.contrib import admin
-class Employee (models.Model):
-    eid=models.CharField(max_length=20,help_text="Employee ID")
-    name=models.CharField(max_length=100)
-    salary=models.IntegerField()
-    age=models.IntegerField()
-    email=models.EmailField()
+class Book(models.Model):
+    book_id=models.IntegerField(primary_key=True)
+    book_name=models.CharField(max_length=50)
+    publisher_name=models.CharField(max_length=50)
+    author_name=models.CharField(max_length=50)
+    publisher_year=models.IntegerField()
 
-
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('eid','name','salary','age','email')
-
+class BookAdmin(admin.ModelAdmin):
+    list_display=('book_id','book_name','publisher_name','publisher_year','author_name')
 
 ```
 
 ## OUTPUT
-![image](https://github.com/syedfayaz3105/ORM/assets/147144126/b6d531d4-e456-4d69-b96a-7a4ad3660324)
-
+![314385458-eebfbbc4-f644-4a10-827b-1581f4940c3c](https://github.com/syedfayaz3105/ORM/assets/147144126/f04b1338-e58b-4fda-941e-bbcec87cbbe6)
+![314385491-df3dc118-40e6-46f1-b895-23524f55a9fc](https://github.com/syedfayaz3105/ORM/assets/147144126/0c7270b6-482f-45ff-8627-e9819f0aabaa)
 
 
 ## RESULT
