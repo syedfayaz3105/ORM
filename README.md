@@ -53,7 +53,7 @@ class BookAdmin(admin.ModelAdmin):
 ```
 
 ## OUTPUT
-![314385458-eebfbbc4-f644-4a10-827b-1581f4940c3c](https://github.com/syedfayaz3105/ORM/assets/147144126/f04b1338-e58b-4fda-941e-bbcec87cbbe6)
+
 ![314385491-df3dc118-40e6-46f1-b895-23524f55a9fc](https://github.com/syedfayaz3105/ORM/assets/147144126/0c7270b6-482f-45ff-8627-e9819f0aabaa)
 
 
